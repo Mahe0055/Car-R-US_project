@@ -1,5 +1,6 @@
 package ita3.car.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -39,6 +40,7 @@ public class Member {
     private int ranking;
 
 
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<Reservation> reservations = new ArrayList<>();
 

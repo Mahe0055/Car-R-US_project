@@ -1,5 +1,6 @@
 package ita3.car.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -31,7 +32,7 @@ public class Car {
     @Column(name = "max_discount")
     private int bestDiscount;
 
-
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<Reservation> reservations = new ArrayList<>();
 

@@ -4,10 +4,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
 
-/*
+
 public class ReservationDTO {
 
-
+/*
     private Long memberId;
     private Long carId;
 
@@ -15,4 +15,6 @@ public class ReservationDTO {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate reservationDate;
 
-}*/
+ */
+
+}
